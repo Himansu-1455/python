@@ -10,7 +10,7 @@
 ########### Write your code above ###############
 S = input()
 print(S)
-
+   
 n = int(input())
 print(n + 10)
 
