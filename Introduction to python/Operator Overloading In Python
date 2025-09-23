@@ -1,0 +1,16 @@
+#User function Template for python3
+#Complete the given class
+class ComplexNumber:
+
+        # Your code hereclass ComplexNumber:
+    def __init__(self, real, imaginary):
+        self.real = real
+        self.imaginary = imaginary
+
+    # Overloading + operator
+    def __add__(self, other):
+        return ComplexNumber(self.real + other.real, self.imaginary + other.imaginary)
+
+    # String representation
+    def __str__(self):
+        return f"{self.real} + {self.imaginary}i"
