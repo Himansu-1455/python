@@ -1,0 +1,13 @@
+#User function Template for python3
+# Implement Employee and SalesEmployee classes here
+class Employee:
+    def __init__(self, emp_id,emp_salary):
+        self.id = emp_id
+        self.salary =emp_salary
+        
+        
+        
+class SalesEmployee(Employee):
+    def __init__(self,emp_id,emp_salary,sales):
+        super().__init__(emp_id,emp_salary)
+        self.sales = sales
