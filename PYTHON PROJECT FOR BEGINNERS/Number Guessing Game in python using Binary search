@@ -7,7 +7,7 @@ def guessNumber(startRange, endRange):
         return True
 
     # Middle of the range
-    mid = (startRange + endRange) // 2
+    mid  = (startRange + endRange) // 2
 
     # Asking user about the actual number
     print(f"Is the number {mid}? (Y/N): ", end="")
