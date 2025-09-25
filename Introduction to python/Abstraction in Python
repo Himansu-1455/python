@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 from abc import ABC, abstractmethod
 
 # Abstract class
-class Shape(ABC):
+class Shape(ABC):  
     def __init__(self, c):
         self.color = c
 
