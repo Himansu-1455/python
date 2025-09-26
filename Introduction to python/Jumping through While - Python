@@ -1,0 +1,10 @@
+# Function to print x in increasing order
+def printIncreasingPower(x):
+    start = 1
+    jump = 1
+
+    # Loop to jump in powers of 2
+    while (jump <= x):
+        print(jump, end=" ")
+        start += 1
+        jump = start**2
