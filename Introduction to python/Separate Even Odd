@@ -1,0 +1,14 @@
+#Back-end complete function Template for Python 3
+
+
+def evenOdd(arr):
+    even = []
+    odd = []
+
+    for e in arr:
+        if e % 2 == 0:
+            even.append(e)
+        else:
+            odd.append(e)
+
+    return (even, odd)
