@@ -1,0 +1,53 @@
+class Solution:
+
+    direction = "DLRU"
+
+    # Arrays to represent change in rows and columns
+    dr = [1, 0, 0, -1]
+    dc = [0, -1, 1, 0]
+
+    # Function to check if cell(row, col) is inside the maze and unblocked
+    def isValid(self, row, col, n, maze):
+        return 0 <= row < n and 0 <= col < n and maze[row][col] == 1
+
+    # Function to get all valid paths
+    def findPath(self, row, col, maze, n, ans, currentPath):
+        if row == n - 1 and col == n - 1:
+            ans.append(currentPath)
+            return
+
+        # Mark the current cell as blocked
+        maze[row][col] = 0
+
+        for i in range(4):
+
+            # Find the next row and column based on the current direction
+            nextRow = row + self.dr[i]
+            nextCol = col + self.dc[i]
+
+            # Check if the next cell is valid or not
+            if self.isValid(nextRow, nextCol, n, maze):
+                currentPath += self.direction[i]
+
+                # Recursively call the findPath function for the next cell
+                self.findPath(nextRow, nextCol, maze, n, ans, currentPath)
+
+                # Remove the last direction when backtracking
+                currentPath = currentPath[:-1]
+
+        # Mark the current cell as unblocked
+        maze[row][col] = 1
+
+    def ratInMaze(self, maze):
+        result = []
+        n = len(maze)
+        currentPath = ""
+
+        if maze[0][0] != 0 and maze[n - 1][n - 1] != 0:
+
+            # Function call to get all valid paths
+            self.findPath(0, 0, maze, n, result, currentPath)
+
+        # Sort results lexicographically
+        result.sort()
+        return result
