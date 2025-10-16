@@ -1,0 +1,25 @@
+class Solution:
+
+    def removekeys(self, root, l, r):
+        if root is None:
+            return None
+
+        left = self.removekeys(root.left, l, r)
+
+        right = self.removekeys(root.right, l, r)
+
+        # If curr node lies in the range, update its
+        # left and right nodes and return curr node.
+        if l <= root.data <= r:
+            root.left = left
+            root.right = right
+            return root
+
+        # If current node is less than range,
+        # then return the updated right subtree.
+        elif root.data < l:
+            return right
+
+        # Else return the updated left subtree.
+        else:
+            return left
