@@ -1,0 +1,29 @@
+class Solution:
+
+    def nearlySorted(self, arr, k):
+
+        n = len(arr)
+
+        # Creating a min heap
+        pq = []
+
+        # Pushing first k elements in pq
+        for i in range(k):
+            heapq.heappush(pq, arr[i])
+
+        i = k
+        index = 0
+
+        while i < n:
+            heapq.heappush(pq, arr[i])
+
+            # Size becomes k+1 so pop it
+            # and add minimum element in (index) position
+            arr[index] = heapq.heappop(pq)
+            i += 1
+            index += 1
+
+        # Putting remaining elements in array
+        while pq:
+            arr[index] = heapq.heappop(pq)
+            index += 1
