@@ -8,7 +8,7 @@ public:
         int modulo = A[0]%k; // calculating the modulo of the first element
         for(int i = 1;i < N;i++){ // checking if all elements have the same modulo
             if(A[i]%k != modulo)
-                return -1; // return -1 if not all elements have the same modulo
+                return -1; // return -1 if not all elements  have the same modulo
         }
         sort(A, A+N); // sorting the array
         int ans = 0, median = A[N/2]; // initializing the answer and finding the median
