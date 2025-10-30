@@ -4,7 +4,7 @@ class Solution:
         res = []
         q = deque()
 
-     # Enqueue the first binary number
+    # Enqueue the first binary number
         q.append("1")
 
         # This loop is like BFS of a tree with 1 as root
