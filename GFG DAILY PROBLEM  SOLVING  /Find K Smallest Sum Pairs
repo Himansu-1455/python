@@ -4,7 +4,7 @@ class Solution:
     def kSmallestPair(self, arr1, arr2, k):
         ans = []
 
-        # Min-heap to keep track of current smallest sum and indices
+    # Min-heap to keep track of current smallest sum and indices
         import heapq
         pq = []
         my_set = set()
