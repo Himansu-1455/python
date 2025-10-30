@@ -8,7 +8,7 @@ class Solution:
             res.append("".join(s))
             return
 
-        # assign '0' at current position
+     # assign '0' at current position
         s[i] = '0'
         self.binstrRec(s, i + 1, res)
 
