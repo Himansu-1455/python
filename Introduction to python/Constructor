@@ -1,5 +1,5 @@
 class User{
-    public:
+    public :
     string name;
     User(){
         name = "Default";
