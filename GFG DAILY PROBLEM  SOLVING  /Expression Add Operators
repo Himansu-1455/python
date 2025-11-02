@@ -3,7 +3,7 @@ class Solution:
     def buildExpr(self, res, expr, digits, target, idx, evalVal, last):
 
         if idx == len(digits):
-            if evalVal == target:
+            if evalVal == target :
                 res.append(expr)
             return
 
