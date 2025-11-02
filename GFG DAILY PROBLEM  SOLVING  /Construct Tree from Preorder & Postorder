@@ -1,4 +1,4 @@
-class Solution:
+class Solution :
 
     def constructTreeUtil(self, pre, post, preIndex, l, h, size, postIndexMap):
         if preIndex[0] >= size or l > h:
