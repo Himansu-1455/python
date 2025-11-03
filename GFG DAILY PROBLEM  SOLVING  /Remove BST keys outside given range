@@ -15,7 +15,7 @@ class Solution:
             root.right = right
             return root
 
-        # If current node is less than range,
+        #   If current node is less than range,
         # then return the updated right subtree.
         elif root.data < l:
             return right
