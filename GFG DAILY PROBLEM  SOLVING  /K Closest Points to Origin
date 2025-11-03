@@ -6,7 +6,7 @@ class Solution {
     }
 
     vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
-        // Max heap to store points with their
+        //  Max heap to store points with their
         // squared distances
         priority_queue<pair<int, vector<int>>> maxHeap;
 
