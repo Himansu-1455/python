@@ -9,7 +9,7 @@ class Solution :
         preIndex[0] += 1
 
         # If only one node in this subtree
-        if l == h or preIndex[0] >= size:
+        if l == h or preIndex[0] >= size :
             return root
 
         # Find the index of the next preorder element in postorder
