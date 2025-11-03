@@ -11,7 +11,7 @@ class Solution:
 
         total_cost = 0
 
-        #using a loop while there is more than one element in min heap.
+        # using a loop while there is more than one element in min heap.
         while (len(min_heap) > 1):
 
             #storing the first and second numbers from min heap.
